@@ -1,5 +1,18 @@
 # Illustrazioni del sito
 
+## Loghi aggiunti il 12 novembre 2026
+
+File locali in `docs/assets/logos/`, mantenuti nelle proporzioni originali e usati per identificazione didattica. Non generati con AI.
+
+- `linux.png`: Tux di Larry Ewing, realizzato con The GIMP. Attribuzione: Larry Ewing, lewing@isc.tamu.edu, e The GIMP. [Fonte e condizioni](https://commons.wikimedia.org/wiki/File:Tux.png).
+- `windows.svg`: logo Windows, Microsoft. [Fonte](https://commons.wikimedia.org/wiki/File:Windows_logo_-_2021.svg).
+- `vmware.svg`: logo VMware. [Fonte](https://commons.wikimedia.org/wiki/File:Vmware.svg).
+- `virtualbox.svg`: logo Oracle VirtualBox del 2024. [Fonte](https://commons.wikimedia.org/wiki/File:VirtualBox_2024_Logo.svg).
+
+Le pagine Commons classificano i tre loghi SVG come forme/testo semplici in pubblico dominio; restano i diritti sui marchi. Tux è distribuito con obbligo di attribuzione. I crediti sono visibili anche nella sezione Fonti del sito.
+
+## Illustrazioni originali
+
 Create il 6 novembre 2026 con lo strumento integrato ImageGen; ottimizzate in WebP per il caricamento delle pagine. Sono illustrazioni concettuali, non schermate di software.
 
 File salvati nel progetto:

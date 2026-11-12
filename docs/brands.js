@@ -1,0 +1,12 @@
+const brandAssets={
+ linux:{label:'Linux',file:'linux.png',url:'https://www.kernel.org/'},
+ windows:{label:'Windows',file:'windows.svg',url:'https://www.microsoft.com/windows'},
+ vmware:{label:'VMware',file:'vmware.svg',url:'https://www.vmware.com/'},
+ virtualbox:{label:'Oracle VirtualBox',file:'virtualbox.svg',url:'https://www.virtualbox.org/'}
+};
+const brandBadge=id=>{const b=brandAssets[id];return `<a class="product-badge product-${id}" href="${b.url}"><img src="assets/logos/${b.file}" alt="" decoding="async"><span>${b.label}</span></a>`;};
+const placements={inizio:['windows','linux'],storia:['windows','linux'],confronto:['windows','linux'],virtualizzazione:['virtualbox'],strumenti:['virtualbox','vmware'],preparazione:['virtualbox'],laboratorio:['linux','virtualbox'],windows:['windows','virtualbox'],snapshot:['virtualbox']};
+for(const [id,brands] of Object.entries(placements)){const lesson=course.find(l=>l.id===id);lesson.sections=`<div class="product-strip" aria-label="Sistemi e software di questa lezione">${brands.map(brandBadge).join('')}</div>`+lesson.sections;}
+const toolsLesson=course.find(l=>l.id==='strumenti');
+toolsLesson.sections=toolsLesson.sections.replace('<th>Oracle VirtualBox</th>','<th><img class="table-brand" src="assets/logos/virtualbox.svg" alt="">Oracle VirtualBox</th>').replace('<th>VMware Workstation / Fusion</th>','<th><img class="table-brand wordmark" src="assets/logos/vmware.svg" alt="">VMware Workstation / Fusion</th>');
+course.find(l=>l.id==='snapshot').sections+=`<section class="section"><h2>Crediti dei loghi</h2><p>Loghi utilizzati per identificare i sistemi e i software descritti. I marchi appartengono ai rispettivi titolari; il sito è un progetto didattico indipendente.</p><ul class="source-list"><li><a href="https://commons.wikimedia.org/wiki/File:Tux.png">Tux, mascotte Linux</a> · Larry Ewing (<a href="mailto:lewing@isc.tamu.edu">lewing@isc.tamu.edu</a>), realizzato con The GIMP; riproduzione da Wikimedia Commons, utilizzabile con attribuzione.</li><li><a href="https://commons.wikimedia.org/wiki/File:Windows_logo_-_2021.svg">Logo Windows</a> · Microsoft; riproduzione da Wikimedia Commons.</li><li><a href="https://commons.wikimedia.org/wiki/File:Vmware.svg">Logo VMware</a> · VMware; riproduzione vettoriale da Wikimedia Commons.</li><li><a href="https://commons.wikimedia.org/wiki/File:VirtualBox_2024_Logo.svg">Logo VirtualBox</a> · Oracle VirtualBox; riproduzione da Wikimedia Commons.</li></ul></section>`;
